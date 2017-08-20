@@ -1,5 +1,14 @@
-# CamJam EduKit 3 - Robotics
+#-------------------------------------------------------------------
+# based on CamJam EduKit 3 - Robotics 
 # Worksheet 7 – Varying the speed of each motor with PWM
+# This includes a section to take a keyboard input 
+#   and drive the motors in teh aproperate direction. 
+# 8=forward
+# 4=left
+# 6=right
+# 2=reverse
+# any other key = all stop
+#------------------------------------------------------------------
 
 import RPi.GPIO as GPIO # Import the GPIO Library
 import time # Import the Time library
@@ -76,6 +85,7 @@ def Right():
     pwmMotorBBackwards.ChangeDutyCycle(DutyCycleB)
 
 # Your code to control the robot goes below this line
+# Modifications to origonal below. 
 try:
     while True:
         #print('enter a number')
